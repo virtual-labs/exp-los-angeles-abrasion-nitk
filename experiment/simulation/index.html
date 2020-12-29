@@ -1,13 +1,388 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>SOLVE</title>
+	<link rel="stylesheet" href="css/abr.css" />
+	<script type="text/javascript" src="js/abr.js"></script>
+	<link href="css/mathstyle.css" rel="stylesheet" /><!--Stylesheet to display Math functions -->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
-</html>
+	<script>
+	var simsubscreennum=0;
+	var temp=0;
+	var p=Math.floor(Math.random()*(9));
+	var rowid = ["head1","head2"];
+	var data = [2499,2520,2525,2540,2650,2600,2530,2550,2580,2590];
+	  
+	</script>
+	</head>
+
+	<body style="margin:0; font-family:verdana;">
+	<div id="simscreen">
+	<div id="title"><h3>LOS ANGELES ABRASION TEST ON AGGREGATE</h3></div>
+
+	<div class="simsubscreen" id="canvas0">
+	<h4 class="incanvas">Objective:</h4>
+	<p class="incanvas" style="font-size:14px;">To determine the abrasion value of coarse aggregate by using Los - Angeles testing machine with an abrasive charge.
+</p><br/>
+	<h4 class="incanvas">Apparatus used:</h4>
+	<p class="incanvas" style="font-size:14px;"> Los Angeles Abrasion Machine, Abrasive Charges, Sieve Shaker, Trowel, Weighing Machine.</p>
+	<img style="position:absolute; left:610px; top:120px;max-width:18%;width:100%;" src="images/man.png" />
+
+		<img style="position:absolute; left:185px; top:220px;cursor:pointer;" title="Abrasion Test Machine" src="images/machine.png" />
+		<img style="position:absolute; left:0px; top:410px;cursor:pointer;" title="Abrasive Charges" src="images/ballPlate.png" />
+	
+	<br>&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red;text-align:justify">Description
+		<span class="tooltiptext">
+		<strong style="color:red">Los Angeles Abrasion Test on aggregates</strong>: is the measure of aggregate toughness and abrasion resistance such as crushing, degradation and disintegration. 
+		</span>
+		</span>
+	</div>
+
+	<div class="simsubscreen" id="canvas1" style="visibility:hidden; ">
+		<strong class="incanvas">STEP</strong>
+		<span class="circlebg">&nbsp;1&nbsp;</span>
+		<p class="steptext">&nbsp;Select the grading to be used in the test such that it conforms to the grading to be used in construction to the maximum extent possible.</p>
+		<table id="selectGrade" border = "1px" style="position:absolute;left:0px;top:100px;font-family:verdana;font-size:14px;text-align:center;border-collapse:collapse" >
+			<tr id = "head1" >
+				<td rowspan = 2 >Grading</td>
+				<td colspan = 10>Weight in gms of each test sample in the size range, mm (Passing and retained on square holes)</td>
+				<td colspan = 2>Abrasive Charge</td>
+			</tr>
+			<tr id = "head2">
+				<td>80-63</td>
+				<td>63-40</td>
+				<td>50-40</td>
+				<td>40-25</td>
+				<td>25-20</td>
+				<td>20-12.5</td>
+				<td>12.5-10</td>
+				<td>10-6.3</td>
+				<td>6.3-4.75</td>
+				<td>4.75-2.36</td>
+				<td>Number of spheres</td>
+				<td>Weight of charge, gm</td>
+			</tr>
+			<tr id="gradeA">
+				<td>A</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>1250</td>
+				<td>1250</td>
+				<td>1250</td>
+				<td>1250</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>12</td>
+				<td>5000+/-25</td>
+			</tr>
+			<tr id="gradeB" >
+				<td>B</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>2500</td>
+				<td>2500</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>12</td>
+				<td>4584+/-25</td>
+			</tr>
+			<tr id="gradeC" >
+				<td>C</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>2500</td>
+				<td>2500</td>
+				<td></td>
+				<td>8</td>
+				<td>3330+/-20</td>
+			</tr>
+			<tr id="gradeD">
+				<td>D</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>5000</td>
+				<td>6</td>
+				<td>2500+/-15</td>
+			</tr>
+			<tr id="gradeE">
+				<td>E</td>
+				<td>2500</td>
+				<td>2500</td>
+				<td>2500</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>12</td>
+				<td>5000+/-25</td>
+			</tr>
+			<tr id="gradeF">
+				<td>F</td>
+				<td></td>
+				<td></td>
+				<td>5000</td>
+				<td>5000</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>12</td>
+				<td>5000+/-25</td>
+			</tr>
+			<tr id="gradeG">
+				<td>G</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>5000</td>
+				<td>5000</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>12</td>
+				<td>5000+/-25</td>
+			</tr>
+		</table>
+		<p id="can1-1" style="position:absolute;left:0px;top:340px;font:'bold verdana';font-size:14px;text-align:center;visibility:hidden;"><strong>Preferred sample for construction:</strong></p>
+		<p id="can1-2" style="position:absolute;left:150px;top:380px;font-family:verdana;font-size:14px;text-align:center;visibility:hidden;">Grading : B</p>
+		<p id="can1-3" style="position:absolute;left:150px;top:420px;font-family:verdana;font-size:14px;text-align:center;visibility:hidden;">Weight of sample in gms: 5000</p>
+		<p id="can1-4" style="position:absolute;left:150px;top:460px;font-family:verdana;font-size:14px;text-align:center;visibility:hidden;">Number of spheres: 12</p>
+	</div>
+
+	<div class="simsubscreen" id="canvas2" style="visibility:hidden;" >
+		<strong class="incanvas">STEP</strong>
+		<span class="circlebg">&nbsp;2&nbsp;</span>
+		<p class="steptext">&nbsp;Sieve the sample in a 20mm, 12.5mm and 10mm IS sieve.</p>
+		<img id="can2-5" style="position:absolute; left:35px; top:240px; visibility:hidden;" src="images/ca1.png" />
+		<img id="can2-1" style="position:absolute; left:10px; top:335px; width:140px;" src="images/pan.png" />
+		<img id="can2-2" style="position:absolute; left:230px; top:335px; width:140px;cursor:pointer" src="images/10.png" />
+		<img id="can2-3" style="position:absolute; left:400px; top:335px; width:140px;cursor:pointer" src="images/12.5.png" />
+		<img id="can2-3a" style="position:absolute; left:570px; top:335px; width:140px;cursor:pointer" src="images/20.png" />
+		<img id="can2-4" style="position:absolute; left:80px; top:100px;cursor:pointer; visibility:hidden;" src="images/plateAgg.png" />
+		<img id="can2-6" style="position:absolute; left:185px; top:180px;cursor:pointer; visibility:hidden;" src="images/cap.png" /></div>
+		
+		<!-- Shaker position -->
+		<img id="can2-7" style="position:absolute; left:400px; top:120px;visibility:hidden;" src="images/5.png" />
+		<img id="can2-7on" style="position:absolute; left:430.5px; top:380.25px; cursor:pointer;visibility:hidden;" src="images/s_on.png" />
+		<img id="can2-7onon" style="position:absolute; left:430px; top:380px; visibility:hidden;" src="images/onon.png" />
+		<img id="can2-3b" style="position:absolute; left:50px; top:250px;cursor:pointer;visibility:hidden;" src="images/sieveset.png" />
+		<img id="can2-9" style="position:absolute; left:120px; top:170px;cursor:pointer;visibility:hidden;" src="images/9.png" />
+		<img id="can2-7l" style="position:absolute; left:434px; top:140px;cursor:pointer;visibility:hidden;" src="images/6.png" />
+		<img id="can2-7r" style="position:absolute; left:544px; top:145px;cursor:pointer;visibility:hidden;"  src="images/6.png" />
+		
+	</div>
+
+	<div class="simsubscreen" id="canvas3" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;3&nbsp;</span>
+	<p class="steptext">&nbsp;Collect the sample retained on 10mm and 12.5mm sieve in a separate container and weigh it to 5000g W<sub>1</sub>(g).</p>
+	<img id="can3-1" style="position:absolute; left:400px; top:120px;" src="images/5.png" />
+	<img id="can3-1on" style="position:absolute; left:430.5px; top:380.25px; cursor:pointer;" src="images/s_on.png" />
+	<img id="can3-2" style="position:absolute; left:450px; top:165px;width:110px;cursor:pointer;" src="images/sieveset.png" />
+	<img id="can3-3" style="position:absolute;left:437.5px; top:170px;cursor:pointer;" src="images/9.png" />
+	<img id="can3-3l" style="position:absolute; left:434px; top:152.5px;cursor:pointer;" src="images/6.png" />
+	<img id="can3-3r" style="position:absolute; left:544px; top:160.5px;cursor:pointer;"  src="images/6.png" />
+
+
+	<img id="can3-7" style="position:absolute; left:35px; top:285px;visibility:hidden; " src="images/ca1.png" />
+	<img id="can3-7a" style="position:absolute; left:35px; top:320px;visibility:hidden; " src="images/ca1.png" />
+	<img id="can3-4" style="position:absolute; left:10px; top:335px; width:140px;visibility:hidden;" src="images/pan.png" />
+	<img id="can3-5a" style="position:absolute; left:-50px; top:276.5px; width:200px;cursor:pointer;visibility:hidden;" src="images/10-1.png" />
+	<img id="can3-5" style="position:absolute; left:10px; top:297.5px; width:140px;cursor:pointer;visibility:hidden;" src="images/10E.png" />
+	<img id="can3-6" style="position:absolute; left:10px; top:259px; width:140px;cursor:pointer;visibility:hidden;" src="images/12.5E.png" />
+	<img id="can3-6b" style="position:absolute; left:-50px; top:238px; width:200px;cursor:pointer;visibility:hidden;" src="images/12.5-1.png" />
+	<img id="can3-6a" style="position:absolute; left:10px; top:221px; width:140px;cursor:pointer;visibility:hidden;" src="images/20.png" />
+	<img id="can3-8" style="position:absolute; left:9.75px; top:209px;cursor:pointer;visibility:hidden;" src="images/cap.png" />
+
+	<span id="can3Span"></span>
+	<img id="can3-13" style="position:absolute; left:300px; top:280px;visibility:hidden" src="images/ca.png" />
+	<img id="can3-9" style="position:absolute; left:260px; top:300px;visibility:hidden;" src="images/wm1.png" />
+	<img id="can3-10" style="position:absolute; left:320px; top:420px;cursor:pointer;visibility:hidden;" src="images/on.png" />
+	<img id="can3-11" style="position:absolute; left:425px; top:420px;cursor:pointer;visibility:hidden;" src="images/tare.png" />
+	<img id="can3-12" style="position:absolute; left:284px; top:255px;cursor:pointer;visibility:hidden " src="images/plate.png" />
+
+	<p id="v3-1" style="position:absolute; left:100px; top:480px;font-family:verdana;font-size:14px;visibility:hidden">Weight of Grade B sample (W<sub>1</sub>) = <span style="border-bottom-style:double;">5000</span>g</p>
+	</div>
+
+	<div id="canvas4" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;4&nbsp;</span>
+	<p class="steptext">&nbsp;Transfer the weighed aggregates and abrasive charge to the circular drum of Los - Angeles machine and fix the cover.</p>
+		<img id="can4-1" style="position:absolute; left:0px; top:180px;cursor:pointer;" src="images/pourMachine.png" />
+		<img id="can4-6" style="position:absolute; left:310px;top:80px;cursor:pointer;visibility:hidden;" src="images/plateAgg.png" />
+		<img id="can4-7" style="position:absolute; left:310px;top:80px;cursor:pointer;visibility:hidden;" src="images/ballPlate1.png" />
+		<img id="can4-6a" style="position:absolute; left:270px;top:65px;cursor:pointer;visibility:hidden;" src="images/rtZM.png" />
+		<img id="can4-7a" style="position:absolute; left:270px;top:65px;cursor:pointer;visibility:hidden;" src="images/ballZm.png" />
+		<img id="can4-6b" style="position:absolute; left:270px;top:65px;cursor:pointer;visibility:hidden;" src="images/rtZmEmpty.png" />
+		<img id="can4-6c" style="position:absolute; left:280px;top:65px;cursor:pointer;visibility:hidden;" src="images/rtZmDone.png" />
+		<img id="can4-5" style="position:absolute; left:250px;top:175px;cursor:pointer;visibility:hidden" src="images/pourCoarse.png" />
+		<img id="can4-8" style="position:absolute; left:250px;top:175px;cursor:pointer;visibility:hidden" src="images/pourBall.png" />
+		<img id="can4-2" style="position:absolute; left:193px; top:185px;cursor:pointer;" src="images/capCover0.png" />
+		<img id="can4-3l" style="position:absolute; left:205.5px; top:190px;cursor:pointer;" src="images/bolt.png" />
+		<img id="can4-3r" style="position:absolute; left:369px; top:190px;cursor:pointer;" src="images/bolt.png" />
+		<img id="can4-4l" style="position:absolute; left:205.5px; top:276px;cursor:pointer;" src="images/bolt.png" />
+		<img id="can4-4r" style="position:absolute; left:369px;top:278px;cursor:pointer;" src="images/bolt.png" />
+	</div>
+
+	<div id="canvas5" class="simsubscreen"   style="visibility:hidden;" >
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;5&nbsp;</span>
+	<p class="steptext">&nbsp;Rotate the machine at a speed of 30 to 33 revolutions per minute. The machine should be balanced and driven such that there is uniform peripheral speed.</p>
+		<img id="can5-1" style="position:absolute; left:0px; top:180px;cursor:pointer;" src="images/mac1.png" />
+		<img id="can5-9" style="position:absolute; left:210px; top:300px;cursor:pointer;" src="images/grindPour.png" />
+		<img id="can5-10a" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10b" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10c" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10d" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10e" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10f" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10g" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10h" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-10i" style="position:absolute; left:210px; top:300px;cursor:pointer;width:3%" src="images/ball.png" />
+		<img id="can5-2a" style="position:absolute; left:180px; top:180px;cursor:pointer;" src="images/cyl.png" />
+		<img id="can5-2" style="position:absolute; left:193px; top:185px;cursor:pointer;" src="images/capCover.png" />
+		<img id="can5-3" style="position:absolute; left:90px; top:340px;cursor:pointer;width:15%;visibility:hidden" src="images/hn1.png" />
+		<img id="can5-4" style="position:absolute; left:90px; top:350px;cursor:pointer;width:15%;visibility:hidden" src="images/hn2.png" />
+		<img id="can5-5" style="position:absolute; left:107px; top:370px;cursor:pointer;" src="images/rtNob.png" />
+		<div id="rev" style="position:absolute; left:510px; top:230px;visibility:hidden;">
+			<span id="revSpan">
+				<span class="digSpan"><span id="d3" class="revStyle">0</span></span>
+				<span class="digSpan"><span id="d2" class="revStyle">0</span></span>
+				<span class="digSpan"><span id="d1" class="revStyle">0</span></span>
+				<span class="digSpan"><span id="d0" class="revStyle">0</span></span>
+			</span>
+		</div>
+		<img id="can5-6" style="position:absolute; left:420px; top:200px;visibility:hidden" src="images/zoom.png" />
+		<img id="can5-7" style="position:absolute; left:555px; top:75px;visibility:hidden" src="images/clk.png" />
+		<img id="can5-8" style="position:absolute; left:615px; top:100px;visibility:hidden" src="images/ndl.png" />
+		<p id="v5-1" style="position:absolute; left:480px; top:280px;font-family:verdana; font-size:14px;color:red;visibility:hidden">Revolution Reading</p>
+	</div>
+
+	<div id="canvas6" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;6&nbsp;</span>
+	<p class="steptext">&nbsp;The entire stone dust is sieved on 1.70 mm IS sieve and is placed in mechanical shaker.</p>
+		<img id="can6-1" style="position:absolute; left:200px; top:300px;visibility:hidden;cursor:pointer;" src="images/aggPlate1.png" />
+		<img id="can6-2" style="position:absolute; left:25px; top:335px; visibility:hidden;" src="images/ca1.png" />
+		<img id="can6-3" style="position:absolute; left:10px; top:345px; width:140px;" src="images/pan.png" />
+		<img id="can6-4" style="position:absolute; left:230px; top:345px; width:140px;cursor:pointer" src="images/s175.png" />
+		<img id="can6-5" style="position:absolute; left:400px; top:250px; cursor:pointer;visibility:hidden;" src="images/trowel.png" />
+		<img id="can6-6" style="position:absolute; left:340px; top:320px; cursor:pointer; visibility:hidden;" src="images/trowelCoarse.png" />
+		<img id="can6-7" style="position:absolute; left:80px; top:220px;transform:rotate(-35deg);cursor:pointer; visibility:hidden;" src="images/trowel.png" />
+		<img id="can6-8" style="position:absolute; left:80px; top:310px;cursor:pointer; visibility:hidden;" src="images/pour.png" />
+		<img id="can6-15" style="position:absolute; left:400px; top:95px; visibility:hidden;" src="images/5.png" />
+		<img id="can6-14" style="position:absolute; left:9.75px; top:295px; visibility:hidden;cursor:pointer" src="images/ss.png" />
+		<img id="can6-9on" style="position:absolute; left:430.5px; top:355.25px; cursor:pointer; visibility:hidden;" src="images/s_on.png" />
+		<img id="can6-9onon" style="position:absolute; left:430px; top:355px; visibility:hidden;" src="images/onon.png" />
+		<img id="can6-10" style="position:absolute; left:9.75px; top:295px; visibility:hidden;cursor:pointer" src="images/ss.png" />
+		<img id="can6-12" style="position:absolute; left:250px; top:170px;cursor:pointer;visibility:hidden;" src="images/9.png" />
+		<img id="can6-11l" style="position:absolute; left:434px; top:140px;cursor:pointer;visibility:hidden;" src="images/6.png" />
+		<img id="can6-11r" style="position:absolute; left:545px; top:145px;cursor:pointer;visibility:hidden;" src="images/6.png" />
+		<img id="can6-13" style="position:absolute; left:200px; top:250px; visibility:hidden;cursor:pointer" src="images/cap.png" />
+	</div>
+	
+	<div class="simsubscreen" id="canvas7"  style="visibility:hidden" >
+	<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;7&nbsp;</span>
+	<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;The material coarser than 1.70mm W<sub>2</sub>(g) size is weighed.</p>
+	<img id="can7-9" style="position:absolute; left:330px; top:280px; visibility:hidden;" src="images/wm1.png" />
+	<img id="can7-9a" style="position:absolute; left:390px; top:400px;cursor:pointer;visibility:hidden;" src="images/on.png" />
+	<img id="can7-9b" style="position:absolute; left:495px; top:400px;cursor:pointer;visibility:hidden;" src="images/tare.png" />
+	<img id="can7-1" style="position:absolute; left:400px; top:95px; " src="images/5.png" />
+	<img id="can7-2" style="position:absolute; left:450px; top:195px; width:110px; " src="images/ss.png" />
+	<img id="can7-3" style="position:absolute; left:437.5px; top:195px;cursor:pointer " src="images/9.png" />
+	<img id="can7-3l" style="position:absolute; left:434px; top:176.5px;cursor:pointer " src="images/6.png" />
+	<img id="can7-3r" style="position:absolute; left:545px; top:183px; cursor:pointer" src="images/6.png" />
+	<img id="can7-10" style="position:absolute; left:360px; top:235px;cursor:pointer;visibility:hidden " src="images/plate.png" />
+	<img id="can7-10a" style="position:absolute; left:360px; top:235px;cursor:pointer;visibility:hidden " src="images/platePan.png" />
+
+	<img id="can7-8" style="position:absolute; left:25px; top:360px; visibility:hidden;cursor:pointer" src="images/ca2.png" />
+	<img id="can7-6" style="position:absolute; left:25px; top:320px; visibility:hidden;cursor:pointer" src="images/ca1.png" />
+	<img id="can7-4" style="position:absolute; left:10px; top:335px; width:140px; visibility:hidden;cursor:pointer" src="images/pan.png" />
+	<img id="can7-41" style="position:absolute; left:10px; top:335px; width:140px; visibility:hidden;cursor:pointer" src="images/pan2.png" />
+	<img id="can7-41a" style="position:absolute; left:10px; top:335px;visibility:hidden;cursor:pointer" src="images/panHand.png" />
+	<img id="can7-41b" style="position:absolute; left:320px; top:100px;visibility:hidden;cursor:pointer" src="images/panTilt.png" />
+	<img id="can7-5" style="position:absolute; left:10px; top:297.5px; width:140px; visibility:hidden;cursor:pointer" src="images/filled175.png" />
+	<img id="can7-5a" style="position:absolute; left:0px; top:280px; width:200px; visibility:hidden;cursor:pointer" src="images/filled175hand.png" />
+	<img id="can7-7" style="position:absolute; left:9.75px; top:285px; visibility:hidden;cursor:pointer" src="images/cap.png" />
+	<p id="v7-1" style="position:absolute; left:10px; top:460px; font-size:14px;font-family:verdana; visibility:hidden;">Weight of aggregate retained in 1.70mm sieve (W<sub>2</sub>)= <span id="s1">       </span>g</p>
+	<p id="v7-2" style="position:absolute; left:430px; top:356px;font-size:14px;font-family:verdana; visibility:hidden;"></p>
+</div>
+
+
+<div id="canvas8" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;8&nbsp;</span>
+	<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Observation and Results.</p>	
+	<label for = "can8-1" id="l1" class="obsFont" style="position:absolute; left:50px; top:50px;">Type of aggregate taken = <span id="can8-1"></span></label>
+	<label for = "can8-2" id="l2" class="obsFont" style="position:absolute; left:50px; top:100px;visibility:hidden ">Grade of the Sample used = <span id="can8-2"></span></label>
+	<label for = "can8-3" id="l3" class="obsFont" style="position:absolute; left:50px; top:150px;visibility:hidden ">Original Weight of the Aggregate (W<sub>1</sub>) = <span id="can8-3"></span></label>
+	<label for = "can8-4" id="l4" class="obsFont" style="position:absolute; left:50px; top:200px;visibility:hidden ">Weight of the aggregate retained on 1.70mm  sieve (W<sub>2</sub>) = <span id="can8-4"></span></label>
+	<label id="l5" class="obsFont" style="position:absolute; left:200px; top:260px;visibility:hidden;border:1px solid black;padding:5px">Percentage Wear = <span class="frac"><sup>W<sub>1</sub> - W<sub>2</sub></sup><span>&frasl;</span><sub>W<sub>1</sub> </sub></span> * 100</label>
+	<label id="l6" for = "calci" class="obsFont" style="position:absolute; left:300px; top:320px;visibility:hidden"> = <input id="calci" type="text" class="inputStyle" autocomplete = "off" style="border-bottom:1px solid;width:50px;text-align:center" oninput="checkInputValid(this)"><span id="wrong"></span><span><input type="button" id="chk" value="CHECK" onclick = "calculate();"></span><span><input type="button" id="res" value="RESULT" style="visibility:hidden" onclick = "displayResult();"></span></label>
+	<table id="p8-1" border="1px solid black" style="position:absolute; left:-450px; top:370px;font-family:verdana;font-size:14px;visibility:hidden;padding: 3px;">
+		<tr>
+			<th>Type of work</th>
+			<th>Abrasion Value</th>
+		</tr>
+		<tr>
+			<td>For Wearing surfaces</td>
+			<td>&#8804;30%</td>
+		</tr>
+		<tr>
+			<td>For Non Wearing surfaces</td>
+			<td>&#8804;50%</td>
+		</tr>
+	</table>
+	
+</div>
+	
+	
+	<!-- nextButton -->
+	<div id="nav">
+	<img id="nextButton" onclick="navNext()" src="images/Next.png" />
+	</div>
+
+	<span id="dialog-div" style="text-align:justify;border-radius: 5px;">
+		<p id="divp" style="font-family:verdana; font-size:14px;padding: 5px">Both ends of the pipe must be trimmed to ensure parallel faces.</p>
+		<input type="button" style="cursor:pointer;border-radius: 5px;margin: 0 auto; padding: 0;display: inline-block;text-align: center;" value="OK" onclick = "hideDialog();">
+	</span>
+	 
+	 
+	 <!-- This is the questions division -->
+	<span id="question-div" class = "fadeIn">
+		<p id="divq" style="font-family:verdana; font-size:14px;">Both ends of the pipe must be trimmed to ensure parallel faces.</p>
+		<p id="ans"></p>
+	</span>
+	<!--Blinking Arrow	-->	
+	<img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
+
+	<div id="copyright"> &copy; 2018 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+
+	</div>
+	</body> 
+	</html>
