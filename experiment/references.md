@@ -16,9 +16,9 @@
 <li>Indian Road Congress publications (IRC-73-2006)</li>
 <li>Indian Road Congress publications (IRC -73-1992)</li>
 <li>RDSO report No. RDSO/2009/GE: G-0014 - Guidelines and Specification  <br/> for Design of Formation for Heavy Axle Load.</li>
-<li>[https://theconstructor.org/transportation/determination-of-los-angeles-abrasion-value/1361/](https://theconstructor.org/transportation/determination-of-los-angeles-abrasion-value/1361/)</li>
-<li>[https://nptel.ac.in/courses/105101087/22-Ltexhtml/p5/p.html](https://nptel.ac.in/courses/105101087/22-Ltexhtml/p5/p.html)</li>
-<li>[https://www.aboutcivil.org/to-perform-los-angeles-abrasion-test.html](https://www.aboutcivil.org/to-perform-los-angeles-abrasion-test.html)</li>
+<li><a  href="https://theconstructor.org/transportation/determination-of-los-angeles-abrasion-value/1361/">https://theconstructor.org/transportation/determination-of-los-angeles-abrasion-value/1361/</a></li>
+<li><a  href="https://nptel.ac.in/courses/105101087/22-Ltexhtml/p5/p.html">https://nptel.ac.in/courses/105101087/22-Ltexhtml/p5/p.html</a></li>
+<li><a  href="https://www.aboutcivil.org/to-perform-los-angeles-abrasion-test.html">https://www.aboutcivil.org/to-perform-los-angeles-abrasion-test.html</a></li>
 </ol>
 </td>
 <td style="text-align:justify;padding-top:0px;">Developer: Dr. Pruthviraj U | NITK</br>
