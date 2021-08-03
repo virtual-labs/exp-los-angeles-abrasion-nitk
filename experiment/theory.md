@@ -53,7 +53,7 @@
 </tr>
 </table></center>
 
-<center>(Source: The Constructor, Civil Engineering Home)</center><br>
+<center>(Source: IS 2386(Part 4):1963)</center><br>
 
 <p style="text-indent:50px; text-align:justify;"><strong>Relevant Indian Standard for Los Angeles Abrasion Test on Aggregate</strong>:</p>
 <ol style="text-indent:25px; text-align:justify;list-style-position: inside">
