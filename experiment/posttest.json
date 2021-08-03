@@ -1,44 +1,54 @@
 [{
-	"question": " Which of the following statement is correct?<br>1. For grade A aggregate 10 abrasive charges are used<br>2. For grade B aggregate 12 abrasive charges are used<br>3. For grade A aggregate 12 abrasive charges are used<br>4. For grade B aggregate 10 abrasive charges are used ",
-	"answers": {
-		"a": "1 is correct",
-		"b": "2 and 3 is correct",
-		"c": "3 and 4 is correct",
-		"d": "None of the above"
+		"question": " Which of the following statement is correct?<br>1. For grade A aggregate 10 abrasive charges are used<br>2. For grade B aggregate 12 abrasive charges are used<br>3. For grade A aggregate 12 abrasive charges are used<br>4. For grade B aggregate 10 abrasive charges are used ",
+		"answers": {
+			"a": "1 is correct",
+			"b": "2 and 3 is correct",
+			"c": "3 and 4 is correct",
+			"d": "None of the above"
+		},
+		"correctAnswer": "b"
 	},
-	"correctAnswer": "b"
-}, {
-	"question": "Los Angeles Abrasion test gives information about which property of aggregate?",
-	"answers": {
-		"a": "Compressive strength",
-		"b": "Hardness",
-		"c": "Crushing",
-		"d": "Impact strength"
+
+	{
+		"question": "Los Angeles Abrasion test gives information about which property of aggregate?",
+		"answers": {
+			"a": "Compressive strength",
+			"b": "Hardness",
+			"c": "Crushing",
+			"d": "Impact strength"
+		},
+		"correctAnswer": "b"
 	},
-	"correctAnswer": "b"
-}, {
-	"question": "Machine rotates at the speed of?",
-	"answers": {
-		"a": "20 to 30 revolution /min",
-		"b": "30 to 33 revolution /min",
-		"c": "20 to 35 revolution /min",
-		"d": "20 to 37 revolution /min"
+
+	{
+		"question": "Machine rotates at the speed of?",
+		"answers": {
+			"a": "20 to 30 revolution /min",
+			"b": "30 to 33 revolution /min",
+			"c": "20 to 35 revolution /min",
+			"d": "20 to 37 revolution /min"
+		},
+		"correctAnswer": "b"
 	},
-	"correctAnswer": "b"
-}, {
-	"question": "If W<sub>1</sub>= Total weight of sample, W<sub>2</sub>= final weight of sample, W<sub>3</sub>= Weight of sample passing in 1.7mm sieve, Then percentage wear is",
-	"answers": {
-		"a": "((W<sub>3</sub>-W<sub>1</sub>) /W<sub>2</sub>) * 100",
-		"b": "((W<sub>1</sub>-W<sub>2</sub>)/W<sub>2</sub>) * 100",
-		"c": "((W<sub>1</sub>-W<sub>2</sub>)/W<sub>1</sub>) * 100",
-		"d": "(W<sub>1</sub>/W<sub>2</sub>) * 100"
+	{
+		"question": "If W<sub>1</sub>= Total weight of sample, W<sub>2</sub>= final weight of sample, W<sub>3</sub>= Weight of sample passing in 1.7mm sieve, Then percentage wear is",
+		"answers": {
+			"a": "((W<sub>3</sub>-W<sub>1</sub>) /W<sub>2</sub>) * 100",
+			"b": "((W<sub>1</sub>-W<sub>2</sub>)/W<sub>2</sub>) * 100",
+			"c": "((W<sub>1</sub>-W<sub>2</sub>)/W<sub>1</sub>) * 100",
+			"d": "(W<sub>1</sub>/W<sub>2</sub>) * 100"
+		},
+		"correctAnswer": "a"
 	},
-	"correctAnswer": "a"
-}, {
-	"question": "Slag and limestone have low Los Angeles abrasion loss. (say True or False)",
-	"answers": {
-		"a": "True",
-		"b": "False"
-	},
-	"correctAnswer": "b"
+	{
+		"question": "Slag and limestone have low Los Angeles abrasion loss. (say True or False)",
+		"answers": {
+			"a": "True",
+			"b": "False"
+		},
+		"correctAnswer": "b"
 }]
+
+
+
+
