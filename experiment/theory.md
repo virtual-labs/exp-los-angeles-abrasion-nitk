@@ -7,6 +7,11 @@
 <li>Adequate resistance to surface abrasion under traffic</li>
 </ol>
 
+<center><img src="images/apparatus.png"></center>
+<center>Los Angeles Abrasion Testing Machine</center>
+
+<center>(Source: <a href="https://cementconcrete.org/transportation/los-angeles-abrasion-test-la-on-aggregate/2377/"">https://cementconcrete.org/transportation/los-angeles-abrasion-test-la-on-aggregate/2377/</a>)</center><br>
+
 <p style="text-indent:50px; text-align:justify;">Aggregates used in road construction should be strong enough to resist abrasion and crushing under traffic wheel load. If aggregates are weak the stability of pavement structure is adversely affected. If the aggregates used are not resistant to abrasion it may cause premature failure or a loss of skid resistance of pavements, also poor resistance to abrasion can produce excessive dust. Abrasion test is carried out on the aggregate sample to test the hardness property of aggregates and to decide whether they are suitable for different pavement construction works. Los Angeles test is widely used to test abrasion of aggregate and the method has been standardized in India (IS:2386 part-IV). The Los Angeles abrasion test finds the percentage wear due to relative rubbing action between the aggregate and steel balls.</p>
 
 <p style="text-indent:50px; text-align:justify;">Los Angeles machine has a circular rotating drum of length 520 mm and internal diameter 700 mm mounted on horizontal axis. An abrasive charge consisting of cast iron spherical balls of 48 mm diameters and weight 340-445 g is placed in the cylinder along with the aggregates based on the selected grading. The number of the abrasive spheres varies according to the grading of the sample. The quantity of aggregates to be used depends upon the grading and usually ranges from 5-10 kg. The cylinder is then locked and rotated at the speed of 30-33 rpm for a total of 500 -1000 revolutions depending upon the gradation of aggregates. After specified revolutions, the material passing 1.7 mm IS sieve is measured and expressed as percentage total weight of the sample. This value is called Los Angeles abrasion value.</p>
